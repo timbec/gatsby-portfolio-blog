@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import Image from "../components/image"
 
 console.log(Image)
