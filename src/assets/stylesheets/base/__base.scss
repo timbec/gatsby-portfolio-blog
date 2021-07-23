@@ -47,7 +47,7 @@ main {
   // align-content: center;
   // justify-content: center;
   padding: 2em 0;
-  margin: 3rem 0;
+  margin: 1rem 3rem;
 
   @include respond(tab-port) {
     grid-row: 2/12;

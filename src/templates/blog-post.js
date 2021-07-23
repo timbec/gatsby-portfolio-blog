@@ -16,26 +16,35 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Link to="/blog">Back to Blog</Link>
       <article
-        className="blog-post"
+        className="single__post">
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+        <header className="single__post--header">
+          <h1 
+          className="single__post--header__title"
+          itemProp="headline">
+            {post.frontmatter.title}
+          </h1>
+          <p className="single__post--header__date">
+            {post.frontmatter.date}
+          </p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
+          className="single__post--content"
         />
         <hr />
         <footer>
           
         </footer>
       </article>
-      <nav className="blog-post-nav">
+      <nav className="blog-post-nav post-nav">
         <ul
+          className="post-nav__nav"
           style={{
             display: `flex`,
             flexWrap: `wrap`,
@@ -44,14 +53,14 @@ const BlogPostTemplate = ({ data, location }) => {
             padding: 0,
           }}
         >
-          <li>
+          <li className="post-nav__nav--button">
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li>
+          <li className="post-nav__nav--button">
             {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →

@@ -124,7 +124,7 @@
   &__heading {
     font-size: 6rem;
     text-transform: uppercase;
-    margin: 2rem 4rem;
+    margin: 2rem 1rem;
     border-bottom: 0.3rem solid $color-black;
 
     @include respond(mobile) {
@@ -140,7 +140,7 @@
     box-sizing: inherit;
     grid-gap: 1rem;
     list-style: none;
-    padding: 1rem 3rem;
+    padding: 1rem 0rem;
 
     @include respond(phone) {
       display: block;
