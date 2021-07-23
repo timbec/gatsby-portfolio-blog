@@ -1,89 +1,103 @@
-import * as React from "react"
+import React from "react"
 import { Link, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/Layout"
+import Image from "../components/image"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+console.log(Image)
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
 
+const IndexPage = () => {
   return (
-    <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+    <Layout pageName="home">
+      <Helmet>
+        <title>Home Page</title>
+      </Helmet>
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
+        <section id="intro" className="intro">
+          <article className="intro__text">
+            <h2>Welcome</h2>
+
+            <p>
+              I am a Full-Stack Developer specializing in Javascript, PHP and
+              Python. I have used Wordpress, Laravel and, most recently, Django.
+              This portfolio site is my first site built in Django.
+            </p>
+
+            <p>
+              I have been lucky to have some great clients from diverse fields,
+              including the NYTimes, EPIX TV, Weil Gotshal and Manges, Carnegie,
+              and Lazard Asset Management among others. For a full (er) list,
+              see below.
+            </p>
+
+            <p>
+              Also interested in, in no particular order, in the JAM stack,
+              Gatsby.js, Python Django framework, Data Visualization and
+              Analysis, Machine Learning, and VR/AR.
+            </p>
+
+            <p>
+              I came to web development from a background in media. I also write
+              stuff.
+            </p>
+          </article>
+          <article className="intro__collage">
+            <ul className="intro__collage--list">
+              <li className="intro__collage--photo">
+                <Image src={`collage-images/Writing.jpg`} />
+              </li>
+              <li className="intro__collage--photo">
+                <Image src={`collage-images/opera-slider.jpg`} />
+              </li>
+              <li className="intro__collage--photo">
+                <Image src={`collage-images/Unbearables_2.jpg`} />
+              </li>
+            </ul>
+          </article>
+        </section>
+        <section id="portfolio" className="portfolio">
+          <h2 className="portfolio__heading">Portfolio</h2>
+          <ul className="portfolio__images">
+            <li className="portfolio__images--image one">
+              <Image src={`client-logos/new-epix-logo.png`} />
             </li>
-          )
-        })}
-      </ol>
+            <li className="portfolio__images--image large-logo two">
+              <Image src={`client-logos/nytimes_logo.jpg`} />
+            </li>
+            <li className="portfolio__images--image large-logo three">
+              <Image src={`client-logos/millenium-full.jpg`} />
+            </li>
+            <li className="portfolio__images--image square-logo four">
+              <Image src={`client-logos/sullivan.jpg`} />
+            </li>
+
+            <li className="portfolio__images--image small-logo five">
+              <Image src={`client-logos/greatimmigrants.jpg`} />
+            </li>
+            <li className="portfolio__images--image square-logo six">
+              <Image src={`client-logos/opera-rect.png`} />
+            </li>
+            <li className="portfolio__images--image med-logo seven">
+              <Image src={`client-logos/lazard_asset_management_logo.jpg`} />
+            </li>
+            <li className="portfolio__images--image thin-logo eight">
+              <Image src={`client-logos/weil.png`} />
+            </li>
+            <li className="portfolio__images--image small-logo nine">
+              <Image src={`client-logos/wsj.jpg`} />
+            </li>
+            <li className="portfolio__images--image small-logo ten">
+              <Image src={`client-logos/nyu-law.png`} />
+            </li>
+            <li className="portfolio__images--image small-logo eleven">
+              <Image src={`client-logos/Digitas_Health_Logo.jpg`} />
+            </li>
+          </ul>
+        </section>
     </Layout>
   )
 }
 
-export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
-      }
-    }
-  }
-`
+export default IndexPage
