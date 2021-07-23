@@ -21,26 +21,23 @@ const IndexPage = () => {
 
             <p>
               I am a Full-Stack Developer specializing in Javascript, PHP and
-              Python. I have used Wordpress, Laravel and, most recently, Django.
-              This portfolio site is my first site built in Django.
+              Python. I have used Wordpress, Laravel, Django and, most recently, Gatsby.s.
+              This portfolio site (with attached blog) is my first site built in Gatsby.
             </p>
 
             <p>
               I have been lucky to have some great clients from diverse fields,
               including the NYTimes, EPIX TV, Weil Gotshal and Manges, Carnegie,
               and Lazard Asset Management among others. For a full (er) list,
-              see below.
+              see below or visit my [LinkedIn profile][https://linkedin.com/in/timbeckett1]
             </p>
 
             <p>
-              Also interested in, in no particular order, in the JAM stack,
-              Gatsby.js, Python Django framework, Data Visualization and
-              Analysis, Machine Learning, and VR/AR.
+              As well as web development, I have become very interested in the so-called Web 3.0 - Data Science, Machine Learning, AR/VR, the Blockchain. To that end I have been studying the basics of data science - Data Analysis, Machine Learning, Data Visualization, and the Solidity language used for smart contracts in the Blockchain. 
             </p>
 
             <p>
-              I came to web development from a background in media. I also write
-              stuff.
+              I came to software development from a background in media. With this site, I intend to start writing about Web 3.0, and various obstacles and developments I've encountered as a web developer. 
             </p>
           </article>
           <article className="intro__collage">
