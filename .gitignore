@@ -72,3 +72,6 @@ yarn-error.log
 # Node modules
 node_modules
 package-lock.json
+
+# Notes on Process, Things I've learned etc: 
+# Notes/
