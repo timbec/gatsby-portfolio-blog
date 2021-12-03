@@ -13,13 +13,6 @@ const Header = () => {
           <Logo />
           <Circle />
       </div>
-      <div className="titleContainer">
-        <h1 className="site-header__title">
-          <Link to="/">Tim Beckett</Link>
-        </h1>
-
-        <h2 className="site-header__subtitle">Software Developer</h2>
-      </div>
       {/* <nav>
         <ul>
           <Link to="/about">About</Link>

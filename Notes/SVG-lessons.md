@@ -65,3 +65,11 @@ And imported in the usual way:
 And hey presto, the SVG appeared as it should. 
 
 This means extra work, but I don't know - it can be more work trying to figure out why a plugin isn't doing what it should. Sometimes it's easier to just do it yourself. Generally, I prefer working as directly as a language as is practical, and avoiding the abstraction layers if at all possible. 
+
+
+Create an animated logo: 
+https://codepen.io/LiamChapman/pen/GQwegY
+
+NOT EXACTLY SVG: 
+create text outline: 
+https://www.codesdope.com/blog/article/adding-outline-to-text-using-css/
