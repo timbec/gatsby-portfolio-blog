@@ -33,7 +33,7 @@
       }
 
       &--title {
-        grid-column: 4/6; 
+        grid-column: 4/8; 
         grid-row:1/5; 
         // display:grid;
         z-index: 1; 
@@ -93,11 +93,11 @@
   //   font-size: 5rem;
   // }
   .titleContainer {
-    grid-column: 4/6;
+    grid-column: 4/8;
     grid-row: 2/4;
     z-index: 5; 
 
-    @include respond(tab-port) {
+    @include respond(phone) {
       grid-row: 1/3; 
     }
   }

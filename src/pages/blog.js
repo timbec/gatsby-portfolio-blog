@@ -6,6 +6,9 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import BlogIntro from "../components/blog/BlogIntro";
+
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -15,11 +18,6 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <Seo title="All posts" />
         <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
       </Layout>
     )
   }
@@ -28,6 +26,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <section className="blog">
+      <BlogIntro />
       <section className="blog__list">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -55,6 +54,9 @@ const BlogIndex = ({ data, location }) => {
                     </small>
                 </header>
                 <section className="blog__article--body">
+                  <article className="blog_article--intro">
+                  This is part of an ongoing series based on the principle of 'learning in public'. 
+                  </article>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
