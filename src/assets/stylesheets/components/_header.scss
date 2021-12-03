@@ -5,12 +5,85 @@
   grid-row: 1/2;
   min-height: 20rem;
   background-color: white;
-  border-bottom: 1rem solid $color-red;
+  border-bottom: 0.2rem solid $color-black;
   display: grid;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(5, 5vh);
 
   @include respond(tab-port) {
     grid-column: 2/12;
   }
+
+    &__logos {
+      grid-column: 1/12;
+      grid-row: 1/6;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-template-rows: repeat(6, 5vh);
+
+      .circle {
+        grid-column: 10/11;
+        grid-row:1/3;
+        margin-right: 3rem;  
+
+        @include respond(tab-port) {
+          display: none; 
+        }
+      }
+
+      &--title {
+        grid-column: 4/6; 
+        grid-row:1/5; 
+        // display:grid;
+        z-index: 1; 
+        position: relative; 
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center; 
+        // want to put this in the actual component (styled component)
+        .triangle {
+          transform: translateX(0rem) translateY(-18rem) rotate(-15deg); 
+          z-index: 2;
+
+          @include respond(tab-land) {
+            transform: translateY(-20rem) rotate(-15deg); 
+          }
+
+          @include respond(tab-port) {
+            transform: translateY(-23rem) rotate(-15deg); 
+          }
+
+          @include respond(phone) {
+            transform: translateY(-25rem) rotate(-15deg); 
+          }
+        }
+
+        .black-square {
+          // transform: translateX(270px) translateY(-220px);
+          // position: absolute;
+          // top: 2rem; 
+          // left: 30rem; 
+          grid-row: 3/6;
+          grid-column: 8/11;
+          z-index: 1; 
+          display: none; 
+        } 
+
+        .red-square {
+          // transform: translateX(270px) translateY(-320px);
+          // position: absolute;
+          // top: 4rem; 
+          // left: 25rem; 
+          grid-row: 4/6;
+          grid-column: 7/8;
+          z-index: 0;
+          display: none; 
+        }
+      }
+
+
+    }
 
   // &__title {
   //   margin: 2rem 0;
@@ -20,20 +93,25 @@
   //   font-size: 5rem;
   // }
   .titleContainer {
-    grid-column: 2/8;
-    grid-row: 1/2;
+    grid-column: 4/6;
+    grid-row: 2/4;
+    z-index: 5; 
+
+    @include respond(tab-port) {
+      grid-row: 1/3; 
+    }
   }
 
   h1 {
-    color: $color-black; 
     text-transform: uppercase;
     line-height: 1.1;
     text-align: center;
     margin: 0rem 0 0 0;
 
     a {
-      color: $color-black; 
+      color: $color-black;
       text-decoration: none; 
+      // text-shadow: -1px 1px 0 $color-white, 1px 1px 0 $color-white, 1px -1px 0 $color-white;
     }
   }
 

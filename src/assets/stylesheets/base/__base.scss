@@ -51,6 +51,12 @@ main {
 
   @include respond(tab-port) {
     grid-row: 2/12;
+    margin: 1rem 1rem; 
+  }
+
+  @include respond(phone) {
+    grid-row: 2/12;
+    margin: 1rem 0; 
   }
 
   .container {

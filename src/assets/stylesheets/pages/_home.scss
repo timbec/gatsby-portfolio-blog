@@ -28,6 +28,10 @@
     padding: 1rem 3rem;
   }
 
+  @include respond(phone) {
+    padding: 1rem 1rem;
+  }
+
   &__text {
     display: grid;
     grid-template-columns: auto;
