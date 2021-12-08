@@ -15,7 +15,7 @@ const BlogIntro = () => {
 
         <p>For the moment, I plan on just throwing up articles as I write them, but soon I will add categories and tags, creating separate pages for each category. Then . . . commenting.</p>
 
-        <p>I used to blog quite a bit, as was the trend in the late '00s and early '10s. Those good ole days when social media still allowed for things like small-fry bloggers such as me. When social media was still seen as a force for good. Oh, how naive we were. One of these blog still exists at: https://livefromtheheygate.blogspot.com/. For the other, I will eventually put up selected posts on my writing site at: https: timbeckett-writing.com. </p>
+        <p>I used to blog quite a bit, as was the trend in the late '00s and early '10s, when social media still allowed for things like small-fry bloggers such as me. When social media was still seen as a force for good. Oh, how naive we were. One of these blog still exists at: https://livefromtheheygate.blogspot.com/. For the other, I will eventually put up selected posts on my writing site at: https: timbeckett-writing.com. </p>
 
         <p>
         <em>This is part of an ongoing series based on the principle of 'learning in public'. </em>
