@@ -2,7 +2,7 @@
 title: Evolution of My Portfolio
 date: "2021-07-22T22:12:03.284Z"
 description: "Evolution of my portfolio, and why I made the decisions I did"
-featuredImage: placeholder.jpg
+featuredImage: code-default.jpg
 slug: "blog/evolution-of-my-portfolio"
 ---
 

@@ -32,7 +32,7 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
           let featuredImage =
               post.frontmatter.featuredImage.childImageSharp.fluid || ""
-
+          
           return (
             <li key={post.fields.slug}>
               <article
@@ -41,9 +41,12 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <header className="blog__article--header">
-                <Link to={post.fields.slug}>
+                  <Link to={post.fields.slug}>
                     <Img fluid={featuredImage} />
                   </Link>
+                  <span class="photo-credit">
+                  
+                  </span>
                   <h2 className="blog__article--header__title">
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
@@ -54,9 +57,6 @@ const BlogIndex = ({ data, location }) => {
                     </small>
                 </header>
                 <section className="blog__article--body">
-                  <article className="blog_article--intro">
-                  This is part of an ongoing series based on the principle of 'learning in public'. 
-                  </article>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
