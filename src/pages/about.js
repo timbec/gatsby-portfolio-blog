@@ -15,10 +15,10 @@ const AboutPage = () => {
           <h2 className="article--heading">About Me</h2>
 
           <div className="article--body">
-            <div className="article--photo">
+            <div className="article--body-photo">
               <Image src={`about/self-portrait.jpg`} />
             </div>
-          
+            <div className="article--body-text">
             <p>
               I am a full-stack developer though I tilt more toward the
               front-end. I'm proficient in Javascript, Python, and (if need be)
@@ -32,6 +32,7 @@ const AboutPage = () => {
               which reflect my current interests in tech and the world we live
               in.
             </p>
+            </div>
           </div>
         </article>
         <figure className="article--image">

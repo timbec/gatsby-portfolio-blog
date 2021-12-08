@@ -19,8 +19,8 @@ const BlogPostTemplate = ({ data, location }) => {
       <Link to="/blog">Back to Blog</Link>
       <article
         className="single__post">
-        itemScope
-        itemType="http://schema.org/Article"
+        {/* itemScope
+        itemType="http://schema.org/Article" */}
       >
         <header className="single__post--header">
           <h1 
