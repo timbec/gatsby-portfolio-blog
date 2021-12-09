@@ -18,6 +18,8 @@ I recently encountered `useState()` while building out a new front end from a le
 Two important variables are initialized thus: 
 
 ```
+import React, { useState } from 'react';
+
 export default function NewsPage() {
     const [newsPosts, setNewsPosts] = useState([]);
     ....
