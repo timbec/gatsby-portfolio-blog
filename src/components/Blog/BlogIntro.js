@@ -5,8 +5,8 @@ import { Link } from "gatsby"
 
 const BlogIntro = () => {
     return (
-        <Fragment>
-        <h1>Welcome to my Blog</h1>
+        <article className="blog__intro">
+        <h2 className="blog__intro--title">Welcome to my Blog</h2>
         <p>
         This is part of an ongoing series based on the principle of 'learning in public'. I don't plan on writing anything particularly groundbreaking in the beginning, I just want to get in the habit of what I do for a living, what I'm learning, and what I find interesting. I plan on writing about, in no particular order, web development (in particular front end development), Blockchain technologies, including NFTs, the Metaverse, Machine Learning and AI generally. 
         </p>
@@ -22,7 +22,7 @@ const BlogIntro = () => {
         </p>
             
         
-        </Fragment>
+        </article>
     )
 }
 
