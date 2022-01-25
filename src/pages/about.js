@@ -21,15 +21,14 @@ const AboutPage = () => {
             <div className="article--body-text">
             <p>
               I am a full-stack developer though I tilt more toward the
-              front-end. I'm proficient in Javascript, Python, and (if need be)
-              PHP. I've used Wordpress, Laravel, ResourceSpace, Meteor, Node,
+              front-end. I'm proficient in Javascript, Python, and PHP. I've used Wordpress, Laravel, ResourceSpace, Meteor, Node,
               D3, and many other frameworks. Out of necessity I've developed
               some proficiency in AWS, though by no means an expert.
             </p>
             <p>
-              I blog about random elements of front end development, Data
-              Visualization, Data Analysis generally, and AI and ML, all of
-              which reflect my current interests in tech and the world we live
+              I blog about (for now) random elements of front end development, Data
+              Visualization, Data Analysis generally, and AI and ML, and Blockchain technology, all of
+              which reflect my current interests in tech and the world in which we live.
               in.
             </p>
             </div>
