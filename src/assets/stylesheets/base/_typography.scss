@@ -4,16 +4,47 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat&family=Open+Sans:wght@600&display=swap");
 
+@import url("https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald");
+
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,500, 600, 700");
+
+@import url("https://fonts.googleapis.com/css?family=Archivo:500, 700|Open+Sans:300,700");
+
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&family=Montserrat:wght@400;700&family=PT+Serif:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap");
+
+/**
+body {
+ font-family: 'Cardo', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Oswald', sans-serif;
+ text-transform: uppercase;
+}
+**/
+
+// MORE FONT PAIRINGS: https://artisanthemes.io/best-google-fonts-combinations-modern-agency-website/
+
 h1 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
+  // font-family: "Open Sans", sans-serif;
   font-size: 8rem;
   color: $color-black;
 
   a {
-    font-family: "Monterrat", sans-serif;
+    // font-family: "Monterrat", sans-serif;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-family: "Archivo", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    // font-family: "PT Sans", sans-serif;
+    // font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
     font-size: 8rem;
-    font-weight: 800;
+    font-weight: 700;
     text-transform: uppercase;
     color: $color-black;
   }
@@ -22,7 +53,11 @@ h1 {
 h2,
 h3,
 h4 {
-  font-family: "Montserrat", sans-serif;
+  // font-family: "Montserrat", sans-serif;
+  // font-family: "Oswald", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -31,12 +66,19 @@ h2 {
 
 p {
   font-family: "Didact Gothic", sans-serif;
+  font-family: "Cardo", serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  color: $color-black;
   font-size: 1.6rem;
 }
 
 a {
   font-family: "Open Sans", sans-serif;
   font-family: "Monterrat", sans-serif;
+  font-family: "Cardo", serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
   font-weight: 800;
   text-transform: uppercase;
   color: $color-black;

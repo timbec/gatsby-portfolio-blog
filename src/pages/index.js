@@ -19,7 +19,7 @@ const IndexPage = () => {
 
             <p>
               I am a Full-Stack Developer specializing in Javascript, PHP and
-              Python. I have used Wordpress, Laravel, Django and, most recently, Gatsby.s.
+              Python. I have used Wordpress, Laravel, Django and, most recently, Gatsby.js.
               This portfolio site (with attached blog) is my first site built in Gatsby.
             </p>
 
@@ -31,12 +31,14 @@ const IndexPage = () => {
             </p>
 
             <p>
-              As well as web development, I have become very interested in the so-called Web 3.0 - Data Science, Machine Learning, AR/VR, the Blockchain. To that end I have been studying the basics of data science - Data Analysis, Machine Learning, Data Visualization, and the Solidity language used for smart contracts in the Blockchain. 
+              As well as web development, I have become interested in the so-called Web 3.0 - Data Science, Machine Learning, AR/VR, the Blockchain. To that end I have been studying the basics of data science - Data Analysis, Machine Learning, Data Visualization, and the Solidity language used for smart contracts in the Blockchain, as well as learning about the blockchain generally. 
             </p>
 
             <p>
               I came to software development from a background in media. With this site, I intend to start writing about Web 3.0, and various obstacles and developments I've encountered as a web developer. 
             </p>
+
+            <p>This site remains under construction . . . </p>
           </article>
           <article className="intro__collage">
             <ul className="intro__collage--list">
