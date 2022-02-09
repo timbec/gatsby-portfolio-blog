@@ -20,7 +20,7 @@ In some ways, it's very hard to write about blockchain. Already, three years aft
 
 So back to **The Truth Machine**: what is the blockchain? 
 
-In its most basic sense, the blockchain is an online ledger, a means of recording every transaction in that ledger, and making those transactions public. The identity of the person or entity making the transaction can be (but doesn't have to be) anonymous but the transaction itself is recorded, made public - and, importantly, can't be altered once it has been completed. 
+In its most basic sense, the blockchain is an online ledger, a means of recording every transaction in that ledger, and making those transactions public. The identity of the person or entity making the transaction can be (but doesn't have to be) anonymous but the transaction itself is recorded, is always public - and, importantly, can't be altered once it has been completed. 
 
 From the intro: 
 
