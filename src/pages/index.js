@@ -5,8 +5,6 @@ import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import Image from "../components/image"
 
-console.log(Image)
-
 
 const IndexPage = () => {
   return (
