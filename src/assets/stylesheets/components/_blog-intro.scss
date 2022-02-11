@@ -1,5 +1,5 @@
 .blog__intro {
-    width: 70rem; 
+    width: 100%; 
 
     @include respond(tab-land) {
         width: 100%; 
@@ -9,6 +9,11 @@
         text-align: left; 
         font-size: 2rem; 
     }
+
+    &--content { 
+        column-count: 2; 
+        column-gap: 10rem; 
+      }
 
     p {
         text-align: justify; 
