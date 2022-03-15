@@ -1,25 +1,29 @@
 .blog__intro {
-    width: 100%; 
+  width: 100%;
+
+  @include respond(tab-land) {
+    width: 100%;
+  }
+
+  &--title {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  &--content {
+    column-count: 2;
+    column-gap: 10rem;
+
+    @include respond(tab-port) {
+      column-count: 1;
+    }
+  }
+
+  p {
+    text-align: justify;
 
     @include respond(tab-land) {
-        width: 100%; 
+      font-size: 2rem;
     }
-
-    &--title {
-        text-align: left; 
-        font-size: 2rem; 
-    }
-
-    &--content { 
-        column-count: 2; 
-        column-gap: 10rem; 
-      }
-
-    p {
-        text-align: justify; 
-
-        @include respond(tab-land) {
-            font-size: 2rem; 
-        }
-    }
+  }
 }
