@@ -46,17 +46,17 @@ main {
   // display: flex;
   // align-content: center;
   // justify-content: center;
-  padding: 2em 0;
-  margin: 1rem 3rem;
+  padding: 2em;
+  margin: 1rem 5rem;
 
   @include respond(tab-port) {
     grid-row: 2/12;
-    margin: 1rem 1rem; 
+    margin: 1rem 1rem;
   }
 
   @include respond(phone) {
     grid-row: 2/12;
-    margin: 1rem 0; 
+    margin: 1rem;
   }
 
   .container {

@@ -1,129 +1,317 @@
-.nav {
-  position: fixed;
-  background: transparent;
-  color: $color-black;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: auto;
-  z-index: 100;
+// .nav {
+//   position: fixed;
+//   background: transparent;
+//   color: $color-black;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: auto;
+//   z-index: 100;
 
-  transform: translateX(-180%);
-  // transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
-  transition: transform 500ms cubic-bezier(0.68, 0.55, 0.1, 0.55);
+//   transform: translateX(-180%);
+//   // transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+//   transition: transform 500ms cubic-bezier(0.68, 0.55, 0.1, 0.55);
+
+//   &__list {
+//     list-style: none;
+//     display: flex;
+//     height: 100%;
+//     flex-direction: column;
+//     justify-content: space-evenly;
+//     align-items: center;
+//     margin: 0;
+//     padding: 0;
+//   }
+
+//   &__item {
+//     list-style: none;
+
+//     &--link {
+//       // not sure where these rules are being set:
+//       text-decoration: none;
+//       box-shadow: none;
+//       color: $color-white;
+//       font-weight: bold;
+//       font-size: 2rem;
+//       text-decoration: none;
+
+//       &:hover {
+//         color: $color-red;
+//       }
+//     }
+//   }
+// }
+
+// /*From Scrimba: */
+
+// .nav-toggle {
+//   padding: 0.5em;
+//   background: transparent;
+//   border: 0;
+//   cursor: pointer;
+//   position: absolute;
+//   right: auto;
+//   top: 1em;
+//   left: 1rem;
+//   height: 4rem;
+//   z-index: 1000;
+
+//   @include respond(phone) {
+//     left: 0.5rem;
+//   }
+
+//   &:focus {
+//     outline: none;
+//   }
+// }
+
+// .nav-open .nav {
+//   display: block;
+//   right: 75%;
+//   background: $color-black;
+//   transform: translateX(0%);
+
+//   @include respond(tab-port) {
+//     right: 50%;
+//   }
+
+//   @include respond(phone) {
+//     right: 0;
+//     opacity: 0.95;
+//   }
+// }
+
+// .nav-open .nav-toggle {
+//   position: fixed;
+// }
+
+// .nav-open .hamburger {
+//   transform: rotate(0.625turn);
+// }
+
+// .nav-open .hamburger::before {
+//   transform: rotate(90deg) translateX(-6px);
+// }
+
+// .nav-open .hamburger::after {
+//   opacity: 0;
+// }
+
+// .hamburger {
+//   display: block;
+//   position: relative;
+//   outline: none;
+// }
+
+// .hamburger,
+// .hamburger::before,
+// .hamburger::after {
+//   background: $color-white;
+//   width: 2em;
+//   height: 3px;
+//   border-radius: 1em;
+//   transition: transform 250ms ease-in-out;
+// }
+
+// .hamburger::before,
+// .hamburger::after {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+// }
+
+// .hamburger::before {
+//   top: 6px;
+// }
+// .hamburger::after {
+//   bottom: 6px;
+// }
+
+// Using Jonas' navigation:
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: transparent;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 5rem;
+    right: 6rem;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      display: inline-block;
+    }
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
+  }
+
+  &__background {
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 3.5rem;
+    right: 4.5rem;
+    z-index: 1000;
+    background-color: $color-blue;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 2.5rem;
+    }
+
+    @include respond(phone) {
+      top: 1rem;
+      right: 1rem;
+      height: 12rem;
+      width: 12rem;
+      background: $color-black;
+    }
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
 
   &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     list-style: none;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    width: 100%;
   }
 
   &__item {
-    list-style: none;
+    margin: 1rem;
 
-    &--link {
-      // not sure where these rules are being set:
+    a {
+      font-size: 4rem;
       text-decoration: none;
-      box-shadow: none;
-      color: $color-white;
-      font-weight: bold;
-      font-size: 2rem;
-      text-decoration: none;
-
-      &:hover {
-        color: $color-red;
-      }
     }
   }
-}
 
-/*From Scrimba: */
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 4rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: white;
+      background-size: 220%;
+      transition: all 0.4s;
 
-.nav-toggle {
-  padding: 0.5em;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-  right: auto;
-  top: 1em;
-  left: 1rem;
-  height: 4rem;
-  z-index: 1000;
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+    }
 
-  @include respond(phone) {
-    left: 0.5rem;
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: white;
+      transform: translateX(1rem);
+    }
   }
 
-  &:focus {
-    outline: none;
-  }
-}
-
-.nav-open .nav {
-  display: block;
-  right: 75%;
-  background: $color-black;
-  transform: translateX(0%);
-
-  @include respond(tab-port) {
-    right: 50%;
+  //FUNCTIONALITY
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
   }
 
-  @include respond(phone) {
-    right: 0;
-    opacity: 0.95;
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
   }
-}
 
-.nav-open .nav-toggle {
-  position: fixed;
-}
+  //ICON
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+    display: none;
+    z-index: 1000;
 
-.nav-open .hamburger {
-  transform: rotate(0.625turn);
-}
+    &:hover {
+      display: block;
+    }
 
-.nav-open .hamburger::before {
-  transform: rotate(90deg) translateX(-6px);
-}
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: white;
 
-.nav-open .hamburger::after {
-  opacity: 0;
-}
+      &:hover {
+        display: inline-block;
+      }
+    }
 
-.hamburger {
-  display: block;
-  position: relative;
-  outline: none;
-}
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
 
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  background: $color-white;
-  width: 2em;
-  height: 3px;
-  border-radius: 1em;
-  transition: transform 250ms ease-in-out;
-}
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
 
-.hamburger::before,
-.hamburger::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-}
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
 
-.hamburger::before {
-  top: 6px;
-}
-.hamburger::after {
-  bottom: 6px;
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 }

@@ -13,10 +13,12 @@
 
     @include respond(phone) {
       flex-direction: column;
+      grid-gap: 0;
+      grid-auto-rows: auto;
     }
 
     li {
-      list-style: none; 
+      list-style: none;
     }
   }
 

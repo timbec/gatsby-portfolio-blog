@@ -18,8 +18,8 @@ const IndexPage = () => {
 
           <p>
             I am a Full-Stack Developer specializing in Javascript, PHP and
-            Python. I have used Wordpress, Laravel, Django and, most recently,
-            Gatsby.js. This portfolio site (with attached blog) is my first site
+            Python. I have used Wordpress, Laravel, Django and Gatsby and
+            Next.js. This portfolio site (with attached blog) is my first site
             built in Gatsby.
           </p>
 
@@ -27,21 +27,14 @@ const IndexPage = () => {
             I have been lucky to have some great clients from diverse fields,
             including the NYTimes, EPIX TV, Weil Gotshal and Manges, Carnegie,
             and Lazard Asset Management, among others. For a full (er) list, see
-            below or visit my
+            below or visit my{" "}
             <a href="https://linkedin.com/in/timbeckett1">LinkedIn Profile</a>
           </p>
 
           <p>
-            I have recently become interested in the so-called Web 3.0 - Data
-            Science, Machine Learning, AR/VR, the Blockchain. To that end I have
-            been studying the basics of data science - Data Analysis, Machine
-            Learning, Data Visualization, and the Solidity language used for
-            smart contracts in the Blockchain, as well as learning about the
-            blockchain generally.
-          </p>
-
-          <p>
-            Currently working through the
+            I am constantly learning, and am currently studying Blockchain
+            technologies, Web Scraping, and Data Mining. I am also working
+            through the{" "}
             <a href="https://www.coursera.org/professional-certificates/google-data-analytics">
               Google Data Analytics Certificate Course
             </a>

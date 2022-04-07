@@ -2,12 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 
-
 import Header from "./Header"
-import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 
-import "../assets/stylesheets/styles.scss";
+import "../assets/stylesheets/styles.scss"
 
 const Layout = ({ children, pageName }) => {
   let className = ""
@@ -24,7 +22,6 @@ const Layout = ({ children, pageName }) => {
       <div className="wrapper">
         <Header />
         <main>{children}</main>
-        <Sidebar />
         <Footer />
       </div>
     </>
