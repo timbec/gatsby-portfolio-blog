@@ -139,14 +139,16 @@
     height: 7rem;
     width: 7rem;
     position: fixed;
-    top: 5rem;
-    right: 6rem;
+    top: 6rem;
+    right: 8rem;
     z-index: 2000;
     text-align: center;
     cursor: pointer;
+    opacity: 0.01;
 
     &:hover {
       display: inline-block;
+      opacity: 1;
     }
 
     @include respond(tab-port) {
@@ -258,12 +260,8 @@
   &__icon {
     position: relative;
     margin-top: 3.5rem;
-    display: none;
     z-index: 1000;
-
-    &:hover {
-      display: block;
-    }
+    display: inline-block;
 
     &,
     &::before,
@@ -271,10 +269,6 @@
       width: 3rem;
       height: 2px;
       background-color: white;
-
-      &:hover {
-        display: inline-block;
-      }
     }
 
     &::before,
