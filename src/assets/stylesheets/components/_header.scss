@@ -33,7 +33,7 @@
     }
 
     &--title {
-      grid-column: 4/8;
+      grid-column: 5/8;
       grid-row: 1/5;
       // display:grid;
       z-index: 1;
@@ -102,7 +102,7 @@
   }
 
   .titleContainer {
-    grid-column: 1/6;
+    grid-column: 1/7;
     grid-row: 2/4;
     z-index: 5;
 
@@ -122,11 +122,12 @@
     line-height: 1.1;
     text-align: left;
     margin: 0rem 0 0 0;
-    margin-left: 5rem;
+    margin-left: 3rem;
 
     @include respond(phone) {
       text-align: left;
       margin-top: 1rem;
+      margin-left: 5rem;
     }
 
     a {
